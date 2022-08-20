@@ -1,0 +1,451 @@
+     /*code from w3schools for gallery-altered to fit my site https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp*/
+     /* The grid: Four equal columns that floats next to each other */
+/*main gallery*/
+.columnmain {
+    float: left;
+    width: 25%;
+  }
+.columnmain img{
+    opacity: 0.8;
+    cursor: pointer;
+    margin: 0;
+    padding: 1em;
+    margin-left: 2em;
+    max-width: 50%;
+}
+
+.expandedImgMain{
+    max-width: 80%;
+    margin-inline-start:15% ;
+    padding-bottom:1em ;
+}
+.closebtnmain {
+    position: absolute;
+    top: 5px;
+    right: 8%;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    cursor: pointer;
+  }
+/*article gallery*/
+     .column {
+    float: left;
+    width: 10%;
+  }
+  
+.expandedImg{
+    max-width: 50%;
+    margin-inline-start:30% ;
+    padding-bottom:1em ;
+}
+
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+    margin: 0;
+    padding: 1em;
+    margin-left: 2em;
+    max-width: 25%;
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container {
+    position: relative;
+    display: none;
+    max-width: 90%;
+  }
+
+  /* Closable button beside the image */
+  .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 65%;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+    /*end of gallery code*/
+
+
+    article{grid-area: article;
+        background-color: rgb(248, 243, 236) ;
+        border-radius: 5%;
+    }
+
+       /*main body*/
+    header {
+        grid-area: header;
+        background-color: rgb(238, 230, 224);
+        text-align: center;
+        color:black;
+    }
+
+    body{
+        font-family: georgia;
+        background-color: rgb(238, 230, 224);
+    }
+       
+    h1{
+            background-color:rgb(248, 243, 236) ;
+            padding: .5em;
+            padding-left: 1em;
+            padding-right: 1em;
+            text-align: center;
+        }
+	main {
+            grid-area: main;
+            padding: 5em;
+            font: 1.1em georgia;
+            padding-bottom: 3em;
+            color:black;
+            text-align: left;
+            background-color: rgb(248, 243, 236);
+            border-radius:10% ;
+            max-width: fit-content;
+            margin-inline-start: 5%;
+        }
+        
+    /*aside*/
+    aside {
+            grid-area: aside;
+            text-align: center;
+            color:black;
+            margin: auto;
+            padding: .8em;
+            background-color: rgb(255, 251, 246);
+            border-radius: 5%;
+            max-width: 15em;
+            margin-inline-start: 0%;
+        }
+    
+		.asideimg{
+            max-width: 70%;
+            margin-inline-start: 5%;
+            clear: both;
+            border-radius: 50%;
+        }
+		
+        .headertext{
+            padding-left: .5em;
+            font-size: 1.5em;
+            color:black;
+            float: left;
+            clear: both;
+            display: inline;
+            font-size: 1.5em;
+            max-width: 90%;
+        }
+        li{
+            text-align: left;
+        }
+      /*div + button*/
+      .sun .moon .asideimg		{ 
+        max-width: 50%;
+        float: left; /* YOU CAN FLOAT AN ELEMENT WITHIN A GRID AREA */
+        margin: 1em;
+        padding-top: 0%;
+   
+    }
+        .headeraside2{
+            font-size: 1.2em;
+            padding-left: .3em;
+            color:black;
+            text-align: center;
+        }
+        .aside2{
+            grid-area:div;
+            background-color: rgb(255, 251, 246);
+            color:black;
+            border-radius: 10%;
+            max-width: 15em;
+            padding-bottom: 0em;
+        }
+          
+       
+       /*affects all pages*/
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+            
+            'nav nav nav nav nav nav'
+            'header header header header header header'
+            'aside aside main main main main '
+            'aside aside main main main main '
+            'article article article article article article'
+            'footer footer footer footer footer footer';
+
+
+                /*'header header header header header aside'
+                'nav nav main main main aside'
+                'nav nav main main main div'
+                'nav nav main main main div'
+				'footer footer footer footer footer footer';*/
+            grid-gap: .5em;
+            padding: .5em;
+			
+			max-width: 75%; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+            
+        }
+        
+         /*menu*/
+
+         .icons{
+            max-width:5% ;
+            display: inline;
+            margin: auto;
+            float: left;
+            margin-right: 0em;
+            padding-bottom: 1em;
+            position:static;
+
+        }
+        nav {
+           grid-area: nav;
+           background-color: rgb(255, 251, 246);
+           color:black;
+           max-height: fit-content;
+           border-radius:8%;
+       }
+      .menu{
+         color:black;
+         padding-left: 45%;
+         background-color:rgb(255, 251, 246) ;
+         
+       }
+       ul li {
+           list-style-type: none;
+          
+       }
+       nav ul{
+           text-align:center ;
+       }
+       nav li{
+           display: inline;
+           font-weight: bold;
+           padding: 2em;
+           position:static;
+       }
+       a{
+           color: rgb(40, 40, 134);
+       }
+     
+    /*h3 only in article*/
+       h3{
+         text-align: center;
+     }
+      
+        
+        /*footer*/
+       footer {
+        grid-area: footer;
+        background-color: rgb(255, 251, 246);
+        border-radius: 2%;
+        padding: 1em;
+        font-size: .8em;
+        color:black;
+        padding-left: 45%;
+    }
+
+        /*FIRST BREAK POINT === tablet */
+@media only screen and (max-width : 900px) {
+            
+  
+	main {
+            grid-area: main;
+            padding: 1em;
+            font: 1.1em georgia;
+            padding-bottom: 3em;
+            color:black;
+            text-align: left;
+            background-color: rgb(248, 243, 236);
+            border-radius:10% ;
+            max-width: fit-content;
+            margin-inline-start: 5%;
+        }
+        
+        
+         /*menu*/
+         
+    ul li {
+            display: inline-block;
+        }
+
+    
+    .icons{
+        max-width:15% ;
+        display: inline;
+        float: left;
+        margin-right: 0em;
+        padding-bottom: 1em;
+        position:static;
+    }
+    nav {
+       grid-area: nav;
+       background-color: rgb(255, 251, 246);
+       color:black;
+       max-height: fit-content;
+       border-radius:8%;
+   }
+  .menu{
+     color:black;
+     padding-left: 45%;
+     background-color:rgb(255, 251, 246) ;
+     
+   }
+   ul li {
+       list-style-type: none;
+      
+   }
+   nav ul{
+       text-align:center ;
+   }
+   nav li{
+       display: block;
+       font-weight: bold;
+       padding: .2em;
+       position:static;
+       text-align: center;
+   }
+   
+    /*h3 only in article*/
+       h3{
+         text-align: center;
+     }
+      
+     
+        /*footer*/
+       footer {
+      text-align: left;
+    }
+}
+/*SECOND BREAK POINT === mobile */
+    @media only screen and (max-width : 600px) {
+        .grid-container {
+                display: grid;
+                grid-template-areas:
+                
+                'nav nav nav nav nav nav'
+                'header header header header header header'
+                'main main main main main main'
+                'aside aside aside aside aside aside'
+                'article article article article article article'
+                'footer footer footer footer footer footer';
+    
+                grid-gap: .5em;
+                padding: .5em;
+                
+                max-width: 75%; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+                margin: auto;
+                
+            }
+
+        main {
+                grid-area: main;
+                padding: 2em;
+                font: 1.1em georgia;
+                padding-bottom: 3em;
+                color:black;
+                text-align: left;
+                background-color: rgb(248, 243, 236);
+                border-radius:10% ;
+                width: auto;
+            }
+              
+    /*menu*/
+             
+        ul li {
+                display: inline-block;
+            }
+    
+        
+        .icons{
+            max-width:15% ;
+            display: inline;
+            float: left;
+            margin-right: 0em;
+            padding-bottom: 1em;
+            position:static;
+        }
+        nav {
+           grid-area: nav;
+           background-color: rgb(255, 251, 246);
+           color:black;
+           max-height: fit-content;
+           border-radius:8%;
+       }
+      .menu{
+         color:black;
+         padding-left: 45%;
+         background-color:rgb(255, 251, 246) ;
+         
+       }
+       ul li {
+           list-style-type: none;
+          
+       }
+       nav ul{
+           text-align:center ;
+       }
+       nav li{
+           display: block;
+           font-weight: bold;
+           padding: .2em;
+           position:static;
+           text-align: center;
+       }
+       
+        /*h3 only in article*/
+           h3{
+             text-align: center;
+         }
+          
+    /*div + button*/
+    .sun .moon .asideimg		{ 
+        max-width: 50%;
+        float: none; /* YOU CAN FLOAT AN ELEMENT WITHIN A GRID AREA */
+        margin: 1em;
+        padding-top: 0%;
+        margin-left: 2em;
+   
+    }
+        
+        .headeraside2{
+            font-size: 1.2em;
+            padding-left: .3em;
+            color:black;
+            text-align: center;
+        }
+       
+       
+          
+     /*aside*/
+    aside {
+        grid-area: aside;
+        text-align: center;
+        color:black;
+        padding: .8em;
+        background-color: rgb(255, 251, 246);
+        border-radius: 5%;
+        max-width: 15em;
+        margin-inline-start: 15%;
+    }       
+            /*footer*/
+           footer {
+          text-align: center;
+          padding-left: 0%;
+        }
+    }

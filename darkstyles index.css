@@ -1,0 +1,425 @@
+       /*home page*/
+       /*main body*/
+       img		{ 
+        max-width: 50%;
+        float: left; /* YOU CAN FLOAT AN ELEMENT WITHIN A GRID AREA */
+        margin: 1em;
+        padding-top: 0%;
+   
+    }
+    h1{
+        background-color:rgb(73, 73, 73);
+        padding: .5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        text-align: center;
+        color: rgb(150, 142, 97);
+    }
+    main {
+        grid-area: main;
+        padding: 1em;
+        font: 1.1em georgia;
+        padding-bottom: 3em;
+        color:rgb(226, 226, 226);
+        text-align: left;
+        background-color: rgb(73, 73, 73);
+        border-radius:10% ;
+    }
+    
+    /*aside*/
+    aside {
+        grid-area: aside;
+        text-align: center;
+        color:rgb(266, 266, 266);
+        margin: auto;
+        padding: .8em;
+        background-color: rgb(73, 73, 73);
+        border-radius: 5%;
+    }
+
+    .asideimg{
+        max-width: 70%;
+        margin-inline-start: 15%;
+    }
+    .flag{
+        margin-inline-start: 40%;
+        max-width: 15%;
+    }
+    .headertext{
+        padding-left: .5em;
+        font-size: 1.5em;
+        color:rgb(150, 142, 97);
+    }
+  /*button stuff*/
+    .moon{
+        max-width: 10%;
+        margin-inline-start: 45%;
+    }
+    .sun{
+        max-width: 15%;
+        margin-inline-start: 42%;
+    }
+    .headeraside2{
+        font-size: 1.2em;
+        padding-left: .3em;
+        color:rgb(150, 142, 97);
+        text-align: center;
+        padding-bottom: 1em;
+    }
+    .button1{
+        margin-left: 32%;
+    }
+    .button2{
+        margin-left: 32%;
+    }
+    .aside2{
+        grid-area:div;
+        background-color: rgb(104, 104, 104);
+        color:black;
+        border-radius: 10%;
+        max-width: fit-content;
+        padding-bottom: 0em;
+    }
+    
+
+   
+   /*Hometown page*/ 
+
+    /*main body*/
+    /*
+    .hometownmain{
+        padding: 2em;
+        margin: auto;
+    }
+    .asideht{
+        max-width: 70%;
+        margin-top: 0%;
+        text-align: center;
+        margin-bottom: auto;
+    }
+    .hometown{
+        grid-area: aside;
+        background-color:rgb(238, 230, 224) ;
+    }
+    .hometownimg{
+        max-width: 80%;
+        margin-right: 5em;
+        margin-left: 4em;
+    }
+  .treeimg{
+      margin-left: 30%;
+      max-width: 40%;
+  }
+   h2{
+       padding-inline-start: 10%;
+   }
+   .pta{
+       float: right;
+       max-width: 55%;
+   }
+   .hometownimg1{
+       max-width: 50%;
+       padding-inline-start: 20%;
+       float: right;
+   }
+   
+    .moon{
+        max-width: 10%;
+        margin-inline-start: 45%;
+    }
+    .sun{
+        max-width: 15%;
+        margin-inline-start: 42%;
+    }
+    .headeraside1{
+        font-size: 1.2em;
+        padding-left: .3em;
+        color:black;
+        text-align: center;
+        padding-bottom: 1em;
+    }
+    .button1{
+        margin-left: 32%;
+    }
+    .button2{
+        margin-left: 32%;
+    }
+    .aside1{
+        grid-area:div;
+        background-color: rgb(255, 251, 246);
+        color:black;
+        border-radius: 10%;
+        max-width: fit-content;
+        padding-bottom: 0em;
+        margin:auto;
+    }
+   */
+/*.hometownbody{
+    background-image: url(images/jacaranda\ blossom.webp);
+    background-repeat:repeat-y;
+    background-size:contain;
+}*/
+   /*affects all pages*/
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        
+
+        'nav nav nav nav nav nav'
+        'header header header header header header'
+        'main main main main aside aside'
+        'main main main main div div'
+        'footer footer footer footer footer footer';
+
+
+            /*'header header header header header aside'
+            'nav nav main main main aside'
+            'nav nav main main main div'
+            'nav nav main main main div'
+            'footer footer footer footer footer footer';*/
+        grid-gap: .5em;
+        padding: .5em;
+        
+        max-width: 75%; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+        margin: auto;
+        
+    }
+    header {
+        grid-area: header;
+        background-color: rgb(73, 73, 73);
+        text-align: center;
+        color:rgb(133, 126, 86);
+    }
+
+    body{
+        font-family: georgia;
+        background-color: rgb(34, 34, 34);
+    }
+    /*menu*/
+
+    .icons{
+        max-width:5% ;
+        display: inline;
+        margin: auto;
+        float: left;
+        margin-right: 0em;
+        padding-bottom: 1em;
+        position:static;
+        padding-left: 1em;
+
+    }
+    nav {
+       grid-area: nav;
+       background-color: rgb(73, 73, 73);
+       color:black;
+       max-height: fit-content;
+       border-radius:8%;
+   }
+  .menu{
+     color:rgb(158, 148, 93);
+     padding-left: 45%;
+     background-color:rgb(73, 73, 73);
+     
+   }
+   ul li {
+       list-style-type: none;
+      
+   }
+   nav ul{
+       text-align:center ;
+   }
+   nav li{
+       display: inline;
+       font-weight: bold;
+       padding: 2em;
+       position:static;
+   }
+   a{
+       color: rgb(40, 40, 134);
+   }
+ 
+    
+    /*footer*/
+   footer {
+    grid-area: footer;
+    background-color: rgb(73, 73, 73);
+    border-radius: 2%;
+    padding: 1em;
+    font-size: .8em;
+    color:rgb(158, 148, 93);
+    padding-left: 45%;
+}
+
+         /*FIRST BREAK POINT === tablet */
+         @media only screen and (max-width : 900px) {
+
+            .grid-container {
+                        display: grid;
+                        grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside aside aside div div div'
+                    'footer footer footer footer footer footer';
+                        grid-gap: .5em;
+                        padding: .5em;
+                    }
+                          /*home page*/
+                 /*main body*/
+            img		{ 
+                max-width: 80%;
+               margin-right: 2em;
+               margin-left: 2em;
+            }
+            
+            main {
+                grid-area: main;
+                padding: 4em;
+                font: 1.1em georgia;
+                padding-bottom: 3em;
+                text-align: left;
+                border-radius:10% ;
+            }
+            
+            .aside2{
+                grid-area:div;
+                border-radius: 10%;
+                max-width: fit-content;
+                padding-bottom: 0em;
+                margin-right: 2em;
+                max-height: 20em;
+            }
+            
+            /*footer*/
+           footer {
+            grid-area: footer;
+            border-radius: 2%;
+            padding: 1em;
+            font-size: .8em;
+            text-align: center;
+        }
+            /*menu*/
+                /*menu*/
+         
+     ul li {
+        display: inline-block;
+    }
+
+
+.icons{
+    max-width:15% ;
+    display: inline;
+    float: left;
+    margin-right: 0em;
+    padding-bottom: 1em;
+    position:static;
+}
+nav {
+   grid-area: nav;
+   background-color: rgb(73, 73, 73);
+   color:black;
+   max-height: fit-content;
+   border-radius:8%;
+}
+.menu{
+ color:rgb(158, 148, 93);
+ padding-left: 45%;
+ background-color:rgb(73, 73, 73) ;
+ 
+}
+ul li {
+   list-style-type: none;
+  
+}
+nav ul{
+   text-align:center ;
+}
+nav li{
+   display: block;
+   font-weight: bold;
+   padding: .2em;
+   position:static;
+   text-align: center;
+}
+                }
+                   
+        
+                /*SECOND BREAK POINT === mobile */
+@media only screen and (max-width : 600px) {
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside aside aside div div div'
+                    'footer footer footer footer footer footer';
+                        grid-gap: .5em;
+                        padding: .5em;
+                    }
+                          /*home page*/
+                 /*main body*/
+            img		{ 
+                max-width: 90%;
+               margin-right: 2em;
+               margin-left: 1em;
+            }
+            
+            main {
+                grid-area: main;
+                padding: 1em;
+                font: 1.1em georgia;
+                padding-bottom: 3em;
+                text-align: left;
+                border-radius:10% ;
+            }
+            
+            .aside2{
+                max-height: 60%;
+                margin-right: 2em;
+                max-width: fit-content;
+                padding: 1em;
+            }
+           
+            .button1{
+                margin-left: 22%;
+            }
+            .button2{
+                margin-left: 22%;
+            }
+            /*footer*/
+           footer {
+            grid-area: footer;
+            border-radius: 2%;
+            padding: 1em;
+            font-size: .8em;
+            text-align: center;
+            }
+            /*menu*/
+            
+            .icons{
+                grid-area: nav;
+                     max-width:15% ;
+                     display: inline;
+                     margin-left: 5%;
+                     margin-top: auto;
+                     padding-right: 0em;
+                     margin-right: 0em;
+                     padding-bottom: 1em;
+                     float: left;
+                 }
+          
+            nav li{
+                    display:block;
+                    font-weight: bold;
+                    margin: auto;
+                    padding: .2em;
+                    position:relative;
+                }
+            .flag{
+                max-width: 50%;
+                margin-left: 2em;
+            }
+        }
+         
+
